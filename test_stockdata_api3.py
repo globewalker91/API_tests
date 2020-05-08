@@ -8,6 +8,9 @@ response = requests.get("https://api.iextrading.com/1.0/tops/last?symbols=AAPL,M
 txt = response.text
 seclist = json.loads(txt)
 
+print("The response includes the following headers:")
+print(response.headers)
+
 print(type(seclist))
 print(seclist)
 print(type(seclist[0]))
